@@ -31,11 +31,10 @@ const Navbar = () => {
     <header className="w-full px-32 py-8 font-medium flex items-center justify-between">
       <nav>
         <CustomLink href="/" title="Home" className="mr-6" />
-
         <CustomLink href="/about" title="About" />
         <CustomLink href="/projects" title="Projects" className="mx-4" />
         {/* <CustomLink href="/articles" title="Articles" className="mx-4" /> */}
-        <CustomLink href="videos" title="Videos" className=" ml-4" />
+        <CustomLink href="videos" title="Videos" className="mr-4 " />
       </nav>
 
       <nav className="flex items-center justify-center flex-wrap">
