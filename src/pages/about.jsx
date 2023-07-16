@@ -44,23 +44,21 @@ const about = () => {
                 Biography
               </h2>
               <p className="font-medium">
-                Whats up guys! Im Ali Colak, a software engineer that makes
-                music with a passion for creating beautiful, functional, and
-                user-centered digital experiences. With around a year of
-                experience in the field, I am always looking for new and
-                innovative ways to bring visions to life.
+                Whats up guys! Im Ali Colak, a software engineer, musician, and
+                storyteller with a passion for creating beautiful, functional,
+                and useful experiences. With around a year of experience in the
+                field, I am always looking for new and innovative ways to bring
+                visions to life.
               </p>
               <p className="font-medium my-4">
-                I believe that design is about more than just making things look
-                pretty, its about solving problems and creating intuitive,
-                enjoyable experiences for users.
+                Stories sell. I believe that software has to solve a problem
+                while having good UI/UX in the process.
               </p>
               <p className="font-medium">
                 Whether Im working on a website, mobile app, or other digital
                 product, I bring my commitment to design excellence and
-                user-centered thinking to every project I work on. I look
-                forward to the opportunity to bring my skills and passion to
-                your next project.
+                user-centered thinking to every project I work on. Looking
+                forward to helping you tell your story better.
               </p>
             </div>
             <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 ">
@@ -73,14 +71,14 @@ const about = () => {
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between">
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">50+</span>
+                <span className="inline-block text-7xl font-bold">10+</span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   {" "}
                   satisfied Clients
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">40+</span>
+                <span className="inline-block text-7xl font-bold">10+</span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   {" "}
                   Projects Completed
