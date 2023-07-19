@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -7,10 +7,12 @@ import Layout from "@/components/Layout";
 import {
   AnimatePresence,
   motion,
+  useInView,
   useMotionValue,
   useSpring,
 } from "framer-motion";
 import aliMusic from "../../public/images/instagram/aliMusic.jpg";
+import Skills from "@/components/Skills";
 
 //COMPONENT FOR NUMBER
 
@@ -18,8 +20,23 @@ const AnimatedNumbers = ({ value }) => {
   const ref = useRef(null);
 
   const motionValue = useMotionValue(0);
-  const springValue = useSpring(motionValue, { duration: 3000 });
-  const isInView = useInView({ ref });
+  const springValue = useSpring(motionValue, { duration: 3500 });
+  const isInView = useInView(ref, { once: true });
+
+  useEffect(() => {
+    if (isInView) {
+      motionValue.set(value);
+    }
+  }, [isInView, value, motionValue]);
+
+  useEffect(() => {
+    springValue.on("change", (latest) => {
+      console.log(latest);
+      if (ref.current && latest.toFixed(0) <= value) {
+        ref.current.textContent = latest.toFixed(0);
+      }
+    });
+  }, [springValue, value]);
   return <span ref={ref}></span>;
 };
 
@@ -27,7 +44,7 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>Software engineer by day, singer/songwriter at night</title>
+        <title>About Me</title>
         <meta
           name="About Ali Colak"
           content="Ali Colak is a singer/songwriter & software engineer based out of Chicago Illinois. He holds a bachelors of science in Marketing & Product Management. He wants to change the world, one song, one project at a time"
@@ -71,21 +88,27 @@ const about = () => {
             </div>
             <div className="col-span-2 flex flex-col items-end justify-between">
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">10+</span>
+                <span className="inline-block text-7xl font-bold">
+                  <AnimatedNumbers value={10} />+
+                </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   {" "}
                   satisfied Clients
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">10+</span>
+                <span className="inline-block text-7xl font-bold">
+                  <AnimatedNumbers value={10} />+
+                </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   {" "}
                   Projects Completed
                 </h2>
               </div>
               <div className="flex flex-col items-end justify-center">
-                <span className="inline-block text-7xl font-bold">1+</span>
+                <span className="inline-block text-7xl font-bold">
+                  <AnimatedNumbers value={1} />+
+                </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75">
                   {" "}
                   Years of Experience
@@ -93,6 +116,7 @@ const about = () => {
               </div>
             </div>
           </div>
+          <Skills />
         </Layout>
       </main>
     </>
