@@ -13,6 +13,7 @@ import {
 } from "framer-motion";
 import aliMusic from "../../public/images/instagram/aliMusic.jpg";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 
 //COMPONENT FOR NUMBER
 
@@ -117,6 +118,7 @@ const about = () => {
             </div>
           </div>
           <Skills />
+          <Experience />
         </Layout>
       </main>
     </>
