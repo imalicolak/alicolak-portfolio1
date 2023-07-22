@@ -18,26 +18,44 @@ const FeaturedProject = ({
   languages,
 }) => {
   return (
-    <article className="w-full flex items-center justify-between rounded-2xl border border-solid border-dark bg-light shadow-2xl">
-      <Link href={link} target="_blank">
+    <article className="w-full flex p-12 items-center justify-between rounded-2xl border border-solid border-dark bg-light shadow-2xl">
+      <Link
+        href={link}
+        target="_blank"
+        className="w-1/2 cursor-pointer overflow-hidden rounded-lg"
+      >
         <Image src={img} alt={title} className="w-full h-auto" />
       </Link>
-      <div>
-        <span>{type}</span>
-        <Link href={link} target="_blank">
-          <h2> {title} </h2>
-        </Link>
-        <p> {summary} </p>
-        <p> {languages} </p>
 
-        <Link href={github} target="_blank">
-          {" "}
-          <GithubIcon />{" "}
+      <div className="w-1/2 flex flex-col items-start justify-between pl-6">
+        <span className="text-orange-700 font-medium text-xl">{type}</span>
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline underline-offset-4"
+        >
+          <h2 className="my-2 w-full text-left text-4xl font-bold ">
+            {" "}
+            {title}{" "}
+          </h2>
         </Link>
-        <Link href={link} target="_blank">
-          {" "}
-          Visit Project
-        </Link>
+        <p className="my-2 font-medium text-dark"> {summary} </p>
+        <p className="my-1 text-black/75"> {languages} </p>
+
+        <div className="mt-2 flex items-center">
+          <Link href={github} target="_blank" className="w-10">
+            {" "}
+            <GithubIcon />{" "}
+          </Link>
+          <Link
+            href={link}
+            target="_blank"
+            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
+            upp
+          >
+            Visit Project
+          </Link>
+        </div>
       </div>
     </article>
   );
