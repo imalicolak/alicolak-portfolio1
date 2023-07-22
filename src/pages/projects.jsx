@@ -51,7 +51,6 @@ const FeaturedProject = ({
             href={link}
             target="_blank"
             className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold"
-            upp
           >
             Visit Project
           </Link>
@@ -60,6 +59,48 @@ const FeaturedProject = ({
     </article>
   );
 };
+
+const Project = ({ title, type, img, languages, link, github }) => {
+  return (
+    <article className="w-full flex flex-col items-center justify-center rounded-xl border border-solid border-dark bg-light p-6 relative">
+      <Link
+        href={link}
+        target="_blank"
+        className="w-full cursor-pointer overflow-hidden rounded-lg"
+      >
+        <Image src={img} alt={title} className="w-full h-auto" />
+      </Link>
+
+      <div className="w-full flex flex-col items-start justify-between mt-4">
+        <span className="text-orange-700 font-medium text-xl">{type}</span>
+        <Link
+          href={link}
+          target="_blank"
+          className="hover:underline underline-offset-4"
+        >
+          <h2 className="my-2 w-full text-left text-3xl font-bold ">{title}</h2>
+        </Link>
+
+        <p className="my-1 text-black/75"> {languages} </p>
+
+        <div className="w-full mt-2 flex items-center justify-between">
+          <Link
+            href={link}
+            target="_blank"
+            className=" text-lg font-semibold underline underline-offset-4"
+          >
+            Website
+          </Link>
+          <Link href={github} target="_blank" className="w-8">
+            {" "}
+            <GithubIcon />{" "}
+          </Link>
+        </div>
+      </div>
+    </article>
+  );
+};
+
 const projects = () => {
   return (
     <>
@@ -72,7 +113,7 @@ const projects = () => {
       </Head>
       <main className="w-full mb-24 flex flex-col items-center justify-center">
         <Layout className="pt-16">
-          <AnimatedText text="Rome wasn't built in a day" />
+          <AnimatedText text="Rome wasn't built in a day" className="mb-20" />
 
           <div className="grid grid-cols-12 gap-24">
             <div className="col-span-12">
@@ -87,7 +128,16 @@ web sockets to include real-time chatting and user creation"
                 github="/"
               />
             </div>
-            <div className="col-span-6">Project 1</div>
+            <div className="col-span-6">
+              <Project
+                type="Featured Project"
+                title="Jam - Chat"
+                img={jam}
+                languages="ReactJS, NodeJS, ExpressJS, MongoDB, Socket.io, JavaScript, HTML, CSS"
+                link="https://github.com/imalicolak/Jam"
+                github="/"
+              />
+            </div>
             <div className="col-span-6">Project 2</div>
             <div className="col-span-12">Other</div>
             <div className="col-span-6">Project 3</div>
