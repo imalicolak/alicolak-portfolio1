@@ -7,6 +7,8 @@ import { Montserrat } from "next/font/google";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
+import useThemeSwitcher from "@/components/hooks/useThemeSwitcher";
+
 const montserrat = Montserrat({
   subsets: ["latin"],
   variable: "--font-mont",
@@ -21,7 +23,7 @@ export default function App({ Component, pageProps }) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`${montserrat.variable} font-mont bg-light w-full min-h-screen`}
+        className={`${montserrat.variable} font-mont bg-light w-full min-h-screen dark:bg-dark`}
       >
         <Navbar />
         <Component {...pageProps} />
