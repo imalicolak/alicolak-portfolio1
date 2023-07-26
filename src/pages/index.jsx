@@ -61,7 +61,7 @@ export default function Home() {
           </div>
         </Layout>
         <HireMe />
-        <div className="absolute right-8 bottom-8 inline-block w-20">
+        <div className="absolute right-8 bottom-8 inline-block w-16 ">
           <Image src={lightBulb} alt="Ali Colak" className="w-full h-auto" />
         </div>
       </main>

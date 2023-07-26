@@ -21,7 +21,7 @@ const HireMe = () => {
           w-28 h-28 rounded-full font-semibold 
           dark:bg-light dark:text-dark 
           hover:bg-light hover:text-dark hover:dark:bg-dark hover:dark:text-light
-          hover:dark:boder-light "
+          hover:dark:border-light "
         >
           Hire me
         </Link>

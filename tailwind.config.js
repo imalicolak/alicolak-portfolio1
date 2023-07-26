@@ -21,7 +21,7 @@ module.exports = {
         dark: "#1b1b1b",
         light: "#f5f5f5",
         primary: "rgb(250, 100, 10)", // 240,86,199
-        primaryDark: "#58E6D9", // 80,230,217
+        primaryDark: "#db1313", // 80,230,217
       },
       animation: {
         "spin-slow": "spin 7s linear infinite",

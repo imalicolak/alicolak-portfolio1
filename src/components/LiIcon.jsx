@@ -14,16 +14,16 @@ const LiIcon = ({ reference }) => {
           cx="75"
           cy="50"
           r="20"
-          className=" fill-none stroke-1 stroke-orange-700"
+          className=" fill-none stroke-2 dark:stroke-white"
         />
         <motion.circle
           cx="75"
           cy="50"
           r="20"
-          className="  stroke-[7px] fill-light"
+          className="  dark:stroke-white stroke-[7px] fill-light dark:fill-dark"
           style={{ pathLength: scrollYProgress }}
         />
-        <circle cx="75" cy="50" r="10" className="fill-orange-700" />
+        <circle cx="75" cy="50" r="10" className="fill-primary" />
       </svg>
     </figure>
   );

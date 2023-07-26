@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 const useThemeSwitcher = () => {
-  // true if prefers-color-scheme is dark
+  // true if prefer-color-scheme is dark
   const preferDarkMode = "(prefer-color-scheme: dark)";
 
   const [mode, setMode] = useState("");
@@ -37,6 +37,9 @@ const useThemeSwitcher = () => {
         }
       }
     };
+    // First load, check condition. Check all conditions and keep upon refresh
+    handleChange();
+
     mediaQuery.addEventListener("change", handleChange);
 
     return () => {
