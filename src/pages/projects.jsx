@@ -44,17 +44,20 @@ const FeaturedProject = ({
           {" "}
           {summary}{" "}
         </p>
-        <p className="my-1 text-black/75"> {languages} </p>
+        <p className="my-1 text-black/75 dark:text-light"> {languages} </p>
 
         <div className="mt-2 flex items-center">
           <Link href={github} target="_blank" className="w-10">
             {" "}
             <GithubIcon />{" "}
           </Link>
+          {/* Figure out how to make button border light on hover */}
           <Link
             href={link}
             target="_blank"
-            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark "
+            className="ml-4 rounded-lg bg-dark text-light p-2 px-6 text-lg font-semibold dark:bg-light dark:text-dark dark:hover:border-solid
+            dark:hover:border-light
+            dark:hover:bg-dark dark:hover:text-light "
           >
             Visit Project
           </Link>
@@ -88,7 +91,7 @@ const Project = ({ title, type, img, languages, link, github }) => {
           <h2 className="my-2 w-full text-left text-3xl font-bold ">{title}</h2>
         </Link>
 
-        <p className="my-1 text-black/75"> {languages} </p>
+        <p className="my-1 text-black/75 dark:text-light"> {languages} </p>
 
         <div className="w-full mt-2 flex items-center justify-between">
           <Link
@@ -145,10 +148,10 @@ web sockets to include real-time chatting and user creation"
                 github="/"
               />
             </div>
-            <div className="col-span-6">Project 2</div>
-            <div className="col-span-12">Other</div>
-            <div className="col-span-6">Project 3</div>
-            <div className="col-span-6">Project 4</div>
+            <div className="col-span-6">MusicAli</div>
+
+            {/* <div className="col-span-6">Project 3</div>
+            <div className="col-span-6">Project 4</div> */}
           </div>
         </Layout>
       </main>

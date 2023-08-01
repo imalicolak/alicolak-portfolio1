@@ -26,6 +26,7 @@ export default function Home() {
                 alt="Ali Colak"
                 className="w-full h-auto rounded-[1.75em] mt-12"
                 draggable="false"
+                priority
               />
             </div>
             <div className="w-1/2 flex flex-col items-center self-center pl-16">
