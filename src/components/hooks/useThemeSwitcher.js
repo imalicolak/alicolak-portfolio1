@@ -47,12 +47,13 @@ const useThemeSwitcher = () => {
     };
   }, []);
 
-  // update local storage values
+  // update local storage values -> mode is dark, set dark
   useEffect(() => {
     if (mode === "dark") {
       window.localStorage.setItem("theme", "dark");
       document.documentElement.classList.add("dark");
-    } else {
+    }
+    if (mode === "light") {
       window.localStorage.setItem("theme", "light");
       document.documentElement.classList.remove("dark");
     }
