@@ -71,7 +71,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full px-32 py-8 font-medium flex items-center justify-between dark:text-light relative">
+    <header className="w-full px-32 py-12 font-medium flex items-center justify-between dark:text-light relative">
       {/* HAMBURGER MENU */}
       <button
         className=" flex-col justify-center items-center hidden lg:flex "
@@ -100,7 +100,7 @@ const Navbar = () => {
         <motion.div
           initial={{ scale: 0, opacity: 0, x: "-50%", y: "-50%" }}
           animate={{ scale: 1, opacity: 1 }}
-          className="min-w-[35vw]  z-30 flex flex-col  justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 trnaslate-y-1/2 bg-dark/80 dark:bg-light/80 rounded-lg backdrop-blur-md py-32"
+          className="min-w-[40vw] z-30 flex flex-col  justify-between items-center fixed top-1/2 left-1/2 -translate-x-1/2 trnaslate-y-1/2 bg-dark/80 dark:bg-light/80 rounded-lg backdrop-blur-md py-32"
         >
           {/* NAVBAR */}
           <nav className="flex  flex-col justify-center items-center">
