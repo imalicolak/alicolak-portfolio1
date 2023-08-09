@@ -52,14 +52,17 @@ const about = () => {
           content="Ali Colak is a singer/songwriter & software engineer based out of Chicago Illinois. He holds a bachelors of science in Marketing & Product Management. He wants to change the world, one song, one project at a time"
         />
       </Head>
-
+      <div className="grid w-full grid-cols-8 gap-16 sm:gap-8"></div>
       <main className="flex w-full flex-col items-center justify-center dark:text-light">
         <Layout className="pt-16">
-          <AnimatedText className="mb-16" text="You gotta want it!" />
-          <div className="grid w-full grid-cols-8 gap-16 ">
-            <div className="col-span-3 flex flex-col items-start justify-start">
+          <AnimatedText
+            className="mb-16 lg:!text-7xl sm:!text-6xl !xs:!text-4xl sm:mb-8 "
+            text="You gotta want it!"
+          />
+
+          <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
+            <div className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2">
               <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                {" "}
                 Biography
               </h2>
               <p className="font-medium">
@@ -80,25 +83,29 @@ const about = () => {
                 forward to helping you tell your story better.
               </p>
             </div>
-            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border dark:border-light shadow-xl">
-              <div className="" />
+
+            <div className="col-span-3 relative h-max rounded-2xl border-2 border-solid border-dark bg-light p-8 dark:bg-dark dark:border dark:border-light shadow-xl xl:col-span-4 md:order-1 md:col-span-8  ">
+              <div className="absolute top-0 -right-3 -z-10 w-[102%] h-[103%] rounded-[2rem] bg-dark dark:bg-light" />
               <Image
                 src={aliMusic}
                 alt="Ali Colak"
-                className="w-full h-auto rounded-2xl"
+                className="w-full h-auto rounded-2xl "
                 draggable="false"
+                sizes="(max-width: 768px) 100vw, (max-width:1200px) 50vw, 33vw"
               />
             </div>
-            <div className="col-span-2 flex flex-col items-end justify-between">
+
+            <div className="col-span-2 flex flex-col items-end justify-between xl:col-span-8 xl:flex-row xl:items-center md:order-3">
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block text-7xl font-bold ">
-                  <AnimatedNumbers value={10} />+
+                  <AnimatedNumbers value={5} />+
                 </span>
                 <h2 className="text-xl font-medium capitalize text-dark/75 dark:text-light/75">
                   {" "}
                   satisfied Clients
                 </h2>
               </div>
+
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={10} />+
@@ -108,6 +115,7 @@ const about = () => {
                   Projects Completed
                 </h2>
               </div>
+
               <div className="flex flex-col items-end justify-center">
                 <span className="inline-block text-7xl font-bold">
                   <AnimatedNumbers value={1} />+

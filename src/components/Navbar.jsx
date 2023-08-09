@@ -71,7 +71,7 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full px-32 py-12 font-medium flex items-center justify-between dark:text-light relative">
+    <header className="w-full px-32 py-12 font-medium flex items-center justify-between dark:text-light relative z-10 lg:px-16 md:px-12 sm:px-8">
       {/* HAMBURGER MENU */}
       <button
         className=" flex-col justify-center items-center hidden lg:flex "
@@ -226,9 +226,9 @@ const Navbar = () => {
           `}
           >
             {mode === "dark" ? (
-              <SunIcon className={"fill-dark"} />
+              <SunIcon size={32} className={"fill-dark"} />
             ) : (
-              <MoonIcon className={"fill-dark"} />
+              <MoonIcon size={32} className={"fill-dark"} />
             )}
           </button>
         </nav>

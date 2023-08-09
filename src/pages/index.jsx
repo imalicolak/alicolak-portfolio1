@@ -34,7 +34,7 @@ export default function Home() {
                 text="Bringing ideas to life with code and design."
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
-              <p className="my-4 text-base font-medium ">
+              <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 Front-end, Backend, Fullstack. I am dedicated to turning ideas
                 into web applications that solve a problem.
               </p>
@@ -44,7 +44,7 @@ export default function Home() {
                   alt="Resume"
                   target={"_blank"}
                   className="flex items-center bg-dark text-light p-2.5 px-6 rounded-lg text-lg font-semibold hover:bg-light hover:text-dark
-                  border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light"
+                  border-2 border-solid border-transparent hover:border-dark dark:bg-light dark:text-dark hover:dark:bg-dark hover:dark:text-light hover:dark:border-light md:p-2 md:px-4 md:text-base"
                   download={true}
                 >
                   Resume
@@ -52,7 +52,7 @@ export default function Home() {
                 </Link>
                 <Link
                   href="mailto:19acolak99@gmail.com"
-                  className="ml-4 text-lg font-medium capitalize text-dark hover:underline underline-offset-4 dark:text-light"
+                  className="ml-4 text-lg font-medium capitalize text-dark hover:underline underline-offset-4 dark:text-light md:text-base"
                 >
                   {" "}
                   Contact me
