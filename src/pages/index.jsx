@@ -38,9 +38,9 @@ export default function Home() {
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
-                Your Chicago neighborhood software engineer, UI-UX designer,
-                andd product manager. I spend my days learning by making new
-                projects or taking courses.
+                Your Chicago neighborhood software engineer, UI-UX designer, and
+                product manager. I spend my days learning by making new projects
+                or taking courses.
                 <br />
                 <br />
                 Im enrolled in a data science course to combine code with my
