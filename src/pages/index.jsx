@@ -17,7 +17,7 @@ export default function Home() {
         <title>Home | Ali Colak</title>
         <meta
           name="description"
-          content="Ali Colak, software engineer, product manager, data scientist, with a background in business and marketing. "
+          content="Ali Colak, software engineer, product manager, data scientist, with a background in business and marketing. <Sneak Peak> "
         />
       </Head>
       <main className="flex items-center text-dark w-full dark:text-light  ">
