@@ -34,7 +34,7 @@ export default function Home() {
             </div>
             <div className="w-1/2 flex flex-col items-center self-center pl-16 lg:w-full lg:text-center lg:mt-12 lg:pl-0 ">
               <AnimatedText
-                text="I'm Ali Colak"
+                text="Im Ali Colak"
                 className="!text-6xl !text-left xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl"
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
