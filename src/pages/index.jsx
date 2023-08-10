@@ -36,7 +36,7 @@ export default function Home() {
               />
               <p className="my-4 text-base font-medium md:text-sm sm:text-xs">
                 Software Engineer, Product Manager, Data Scientist. I am
-                dedicated to turning solving problems with code.
+                dedicated to solving problems with code.
               </p>
               <div className="flex items-center self-start mt-2 lg:self-center">
                 <Link
